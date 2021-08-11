@@ -1,0 +1,157 @@
+
+/*------------------------Import-------------------*/
+
+@import url(header.css);
+@import url(footer.css);
+
+
+.abrir {
+    z-index: 1000px;
+    transform: translateX(0);
+}
+
+/*------------------Main__pages---------------*/
+
+.main__info {
+    position: relative;
+    z-index: -5000;
+    padding: 8px 12px;
+    margin-top: 60px;
+}
+
+@media (min-width: 700px) {
+    .main__info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.main__info__title {
+    font-size: 38px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+.main__info__text {
+    color:rgb(100, 100, 100);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-left: 30px;
+    margin-right: 20px;
+    text-align: justify;
+    max-width: 500px;
+}
+
+.main__info__img {
+    text-align: center;
+    position: relative;
+}
+
+.info__img {
+    transform: rotateY(180deg);
+    height: 300px;
+}
+
+.info__img-2 {
+    height: 300px;
+}
+
+
+@media  screen and (min-width: 700px) {
+    .main__info__img {
+        margin-left: -20px;
+    }
+
+    .info__img {
+        margin-top: 15px ;
+        height: 420px;
+    }
+
+    .info__img-2 {
+        margin-top: 15px;
+        height: 420px;
+    }
+}
+
+/*-------------main ---- content----------------*/
+
+.main__catalogue {
+    padding: 10px 20px;
+}
+
+.border {
+    border-bottom: 2px solid #000;
+}
+
+.border__title {
+    text-align: center;
+    margin: 5px 0;
+    font-size: 30px;
+}
+
+/*------------------div of catalogue-------------*/
+
+
+
+.catalogue__container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catalogue {
+    position: relative;
+}
+
+.catalogue__img {
+    object-fit: cover;
+    width: 150px;
+    height: 190px;
+}
+
+.img__scale {
+    transform: scale(1.1);
+}
+
+.img__contain {
+    object-fit: contain;
+}
+
+.figure {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 5px;
+    cursor: pointer;
+    width: 155px;
+    height: 195px;
+    border-radius: 2px;
+}
+
+.capa {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-out;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    width: 160px;
+    height: 200px;
+    top: 0;
+}
+
+.figure:hover > .capa {
+    opacity: 1;
+    visibility: visible;
+}
+
+.catalogue__title {
+    font-size: 18px;
+    margin: 50% auto;
+    max-width: 140px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+}
